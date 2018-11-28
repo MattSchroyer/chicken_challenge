@@ -1,21 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class road here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * A road for chickens to cross.
+ *
+ * @author Matt Schroyer, Elizabeth Haase
+ * @version 0.1
  */
 public class road extends World
 {
-
+    private scoreBoard Score;
     /**
      * Constructor for objects of class road.
-     * 
+     *
      */
     public road()
-    {    
+    {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1);
+        GreenfootImage background = getBackground();
+        background.setColor(Color.GREEN);
+        background.fill();
+
+        Score = new scoreBoard();
+        addObject(Score, 495, 370);
     }
 }
