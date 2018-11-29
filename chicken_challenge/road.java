@@ -18,9 +18,6 @@ public class road extends World
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        GreenfootImage background = getBackground();
-        background.setColor(Color.GREEN);
-        background.fill();
 
         Score = new scoreBoard();
         addObject(Score, 495, 370);
