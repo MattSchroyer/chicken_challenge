@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class road extends World
 {
     private scoreBoard Score;
+    private timer myTimer;
     /**
      * Constructor for objects of class road.
      *
@@ -23,5 +24,8 @@ public class road extends World
 
         Score = new scoreBoard();
         addObject(Score, 495, 370);
+
+        myTimer = new timer();
+        addObject(myTimer, 495, 40);
     }
 }
