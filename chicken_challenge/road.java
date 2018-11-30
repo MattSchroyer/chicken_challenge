@@ -20,10 +20,10 @@ public class road extends World
     public road()
     {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(1000, 500, 1);
 
         Score = new scoreBoard();
-        addObject(Score, 495, 370);
+        addObject(Score, 900, 475);
 
         startTime = new Date();
     }
@@ -36,7 +36,7 @@ public class road extends World
     public void updateTime() {
       Date currentTime = new Date();
       long difference = (currentTime.getTime() - startTime.getTime()) / 1000;
-      showText("Time: " + difference, 495, 40);
+      showText("Time: " + difference, 900, 55);
     }
 
     public void gameOver()
