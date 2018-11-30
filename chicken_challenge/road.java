@@ -47,11 +47,11 @@ public class road extends World
     
     public void movingCars()
     {
-        if (Greenfoot.getRandomNumber(300) < 2)
+        if (Greenfoot.getRandomNumber(100) < 2)
         {
             addObject(new car(), 1000, 103);
         }
-        if (Greenfoot.getRandomNumber(300) < 2)
+        if (Greenfoot.getRandomNumber(100) < 2)
         {
             addObject(new car2(), 0, 168);
         }
