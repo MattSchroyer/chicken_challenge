@@ -1,4 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 
 /**
  * A road for chickens to cross.
@@ -9,7 +12,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class road extends World
 {
     private scoreBoard Score;
-    private timer myTimer;
+    private Date startTime;
     /**
      * Constructor for objects of class road.
      *
@@ -22,7 +25,22 @@ public class road extends World
         Score = new scoreBoard();
         addObject(Score, 495, 370);
 
-        myTimer = new timer();
-        addObject(myTimer, 495, 40);
+        startTime = new Date();
+    }
+
+    public void act()
+    {
+      updateTime();
+    }
+
+    public void updateTime() {
+      Date currentTime = new Date();
+      long difference = (currentTime.getTime() - startTime.getTime()) / 1000;
+      showText("Time: " + difference, 495, 40);
+    }
+
+    public void gameOver()
+    {
+
     }
 }
