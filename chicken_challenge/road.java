@@ -31,6 +31,7 @@ public class road extends World
     public void act()
     {
       updateTime();
+      movingCars();
     }
 
     public void updateTime() {
@@ -43,4 +44,19 @@ public class road extends World
     {
 
     }
+    
+    public void movingCars()
+    {
+        if (Greenfoot.getRandomNumber(300) < 2)
+        {
+            addObject(new car(), 1000, 103);
+        }
+        if (Greenfoot.getRandomNumber(300) < 2)
+        {
+            addObject(new car2(), 0, 168);
+        }
+               
+    }
+    
+    
 }
