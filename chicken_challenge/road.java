@@ -24,7 +24,7 @@ public class road extends World
      */
     public road()
     {
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1000x500 cells with a cell size of 1x1 pixels.
         super(1000, 500, 1);
 
         score = 0;
@@ -47,6 +47,9 @@ public class road extends World
       if (lastTime != difference) {
         timeRemaining--;
         showText("Time: " + timeRemaining, 900, 55);
+      }
+      if (timeRemaining == 0) {
+        gameOver();
       }
       lastTime = difference;
     }
@@ -77,7 +80,9 @@ public class road extends World
 
     public void gameOver()
     {
-
+      // Greenfoot.playSound("game-over-sound.mp3");
+      addObject(new endScreen(score), 500, 250);
+      Greenfoot.stop();
     }
 
 
