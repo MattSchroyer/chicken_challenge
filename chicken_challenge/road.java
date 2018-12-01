@@ -11,8 +11,8 @@ import java.text.DateFormat;
  */
 public class road extends World
 {
-    private scoreBoard Score;
     private Date startTime;
+    private int score;
     /**
      * Constructor for objects of class road.
      *
@@ -22,10 +22,10 @@ public class road extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 500, 1);
 
-        Score = new scoreBoard();
-        addObject(Score, 900, 475);
-
+        score = 0;
         startTime = new Date();
+
+        updateScore();
     }
 
     public void act()
@@ -40,11 +40,17 @@ public class road extends World
       showText("Time: " + difference, 900, 55);
     }
 
-    public void gameOver()
+    public void increaseScore(int increase)
     {
-
+      score += increase;
+      updateScore();
     }
-    
+
+    public void updateScore()
+    {
+      showText("Score: " + score, 900, 475);
+    }
+
     public void movingCars()
     {
         if (Greenfoot.getRandomNumber(100) < 2)
@@ -55,8 +61,13 @@ public class road extends World
         {
             addObject(new car2(), 0, 168);
         }
-               
+
     }
-    
-    
+
+    public void gameOver()
+    {
+
+    }
+
+
 }
