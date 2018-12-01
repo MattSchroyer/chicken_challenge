@@ -17,14 +17,17 @@ public class chicken extends Actor
      */
 
    GreenfootImage splat = new GreenfootImage("Splat.png");
+   GreenfootImage chickenImg = new GreenfootImage("ChickGray.png");
 
    private Boolean isSplattered = false;
+   private Date splatterTime;
 
     public void act()
     {
         // Add your action code here.
         keyCheck();
         collisionCheck();
+        splatterCheck();
     }
 
     public void keyCheck()
@@ -58,11 +61,29 @@ public class chicken extends Actor
       // add egg collision detection to increase score
     }
 
+    public void splatterCheck()
+    {
+      if (isSplattered) {
+        Date currentTime = new Date();
+        int difference = (int) (currentTime.getTime() - splatterTime.getTime()) / 1000;
+        if (difference > 1) {
+          regenerate();
+        }
+      }
+    }
+
     public void splatter()
     {
+      splatterTime = new Date();
       isSplattered = true;
       setImage(splat);
-      setLocation(500, 470);
       // myRoad.splatteredChicken();
+    }
+
+    public void regenerate()
+    {
+      setImage(chickenImg);
+      setLocation(500, 470);
+      isSplattered = false;
     }
 }
