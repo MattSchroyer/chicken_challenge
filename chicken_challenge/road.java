@@ -79,33 +79,51 @@ public class road extends World
     public void movingCars()
     {
         if (Greenfoot.getRandomNumber(300) < 1)
-        {
-            addObject(new carL(), 1000, 103);
+        {           
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carL(), 1000, 103);
+            }            
         }
        
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            addObject(new carR(), 0, 168);
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carR(), 0, 168);
+            }
         }
         
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            addObject(new carL(), 1000, 224);
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carL(), 1000, 224);
+            }
+        }
+        
+        if (Greenfoot.getRandomNumber(300) < 1)
+        {   
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carR(), 0, 287);
+            }
         }
         
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            addObject(new carR(), 0, 287);
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carL(), 1000, 346);
+            }
         }
         
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            addObject(new carL(), 1000, 346);
-        }
-        
-        if (Greenfoot.getRandomNumber(300) < 2)
-        {
-            addObject(new carR(), 0, 403);
+            for(int i = 0; i < 1000; i = i+5)
+            {
+                addObject(new carR(), 0, 403);
+            }
         }        
     }
 
@@ -115,6 +133,4 @@ public class road extends World
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
-
-
 }
