@@ -15,7 +15,10 @@ public class road extends World
     private int score;
     private int timeRemaining;
     private int lastTime;
-
+    
+    private int lives = 3;  // Used to store lives 
+    
+    
     // To adjust how often eggs generate
     private int generateEggs = 1500;
 
@@ -52,6 +55,7 @@ public class road extends World
       }
       if (started) {
         showText("", 500, 45);
+        updateLives();
         updateTime();
         movingCars();
         generateEggs();
@@ -173,5 +177,19 @@ public class road extends World
         {
             addObject(new egg(), x, 403);
         }
+    }
+    
+    public void splatteredChicken()
+    {
+        lives = lives - 1;        
+        if (lives == 0)
+        {
+            gameOver();        
+        }        
+    }
+    
+    public void updateLives()
+    {
+        showText("You have " + lives, 900, 475);   
     }
 }
