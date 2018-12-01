@@ -80,13 +80,33 @@ public class road extends World
     {
         if (Greenfoot.getRandomNumber(100) < 2)
         {
-            addObject(new car(), 1000, 103);
+            addObject(new carL(), 1000, 103);
         }
+       
         if (Greenfoot.getRandomNumber(100) < 2)
         {
-            addObject(new car2(), 0, 168);
+            addObject(new carR(), 0, 168);
         }
-
+        
+        if (Greenfoot.getRandomNumber(100) < 2)
+        {
+            addObject(new carL(), 1000, 224);
+        }
+        
+        if (Greenfoot.getRandomNumber(100) < 2)
+        {
+            addObject(new carR(), 0, 287);
+        }
+        
+        if (Greenfoot.getRandomNumber(100) < 2)
+        {
+            addObject(new carL(), 1000, 346);
+        }
+        
+        if (Greenfoot.getRandomNumber(100) < 2)
+        {
+            addObject(new carR(), 0, 403);
+        }        
     }
 
     public void gameOver()
