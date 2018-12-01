@@ -13,6 +13,11 @@ public class road extends World
 {
     private Date startTime;
     private int score;
+    private int timeRemaining;
+    private int lastTime;
+
+
+    private static int TIME_LIMIT = 31;
     /**
      * Constructor for objects of class road.
      *
@@ -23,6 +28,8 @@ public class road extends World
         super(1000, 500, 1);
 
         score = 0;
+        timeRemaining = TIME_LIMIT;
+        lastTime = 0;
         startTime = new Date();
 
         updateScore();
@@ -36,8 +43,12 @@ public class road extends World
 
     public void updateTime() {
       Date currentTime = new Date();
-      long difference = (currentTime.getTime() - startTime.getTime()) / 1000;
-      showText("Time: " + difference, 900, 55);
+      int difference = (int) (currentTime.getTime() - startTime.getTime()) / 1000;
+      if (lastTime != difference) {
+        timeRemaining--;
+        showText("Time: " + timeRemaining, 900, 55);
+      }
+      lastTime = difference;
     }
 
     public void increaseScore(int increase)
