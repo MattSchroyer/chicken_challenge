@@ -16,8 +16,12 @@ public class road extends World
     private int timeRemaining;
     private int lastTime;
 
+    private Boolean started = false;
 
     private static int TIME_LIMIT = 31;
+
+    private startScreen startscreen = new startScreen();
+
     /**
      * Constructor for objects of class road.
      *
@@ -26,19 +30,26 @@ public class road extends World
     {
         // Create a new world with 1000x500 cells with a cell size of 1x1 pixels.
         super(1000, 500, 1);
-
         score = 0;
         timeRemaining = TIME_LIMIT;
         lastTime = 0;
-        startTime = new Date();
-
-        updateScore();
+        addObject(startscreen, 500, 250);
+        showText("PRESS SPACE TO START", 500, 45);
     }
 
     public void act()
     {
-      updateTime();
-      movingCars();
+      if (Greenfoot.isKeyDown("space")) {
+        started = true;
+        removeObject(startscreen);
+        startTime = new Date();
+        updateScore();
+      }
+      if (started) {
+        showText("", 500, 45);
+        updateTime();
+        movingCars();
+      }
     }
 
     public void updateTime() {
