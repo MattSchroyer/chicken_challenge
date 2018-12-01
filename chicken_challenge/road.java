@@ -15,7 +15,7 @@ public class road extends World
     private int score;
     private int timeRemaining;
     private int lastTime;
-    
+
     // To adjust how often eggs generate
     private int generateEggs = 1500;
 
@@ -25,7 +25,7 @@ public class road extends World
     private static int TIME_LIMIT = 31;
 
     private startScreen startscreen = new startScreen();
-
+    private chicken myChicken = new chicken();
     /**
      * Constructor for objects of class road.
      *
@@ -37,6 +37,7 @@ public class road extends World
         score = 0;
         timeRemaining = TIME_LIMIT;
         lastTime = 0;
+        addObject(myChicken, 500, 470);
         addObject(startscreen, 500, 250);
         showText("PRESS SPACE TO START", 500, 45);
     }
@@ -84,13 +85,13 @@ public class road extends World
     public void movingCars()
     {
         if (Greenfoot.getRandomNumber(300) < 1)
-        {           
+        {
             for(int i = 0; i < 1000; i = i+5)
             {
                 addObject(new carL(), 1000, 103);
-            }            
+            }
         }
-       
+
         if (Greenfoot.getRandomNumber(300) < 1)
         {
             for(int i = 0; i < 1000; i = i+5)
@@ -98,7 +99,7 @@ public class road extends World
                 addObject(new carR(), 0, 168);
             }
         }
-        
+
         if (Greenfoot.getRandomNumber(300) < 1)
         {
             for(int i = 0; i < 1000; i = i+5)
@@ -106,15 +107,15 @@ public class road extends World
                 addObject(new carL(), 1000, 224);
             }
         }
-        
+
         if (Greenfoot.getRandomNumber(300) < 1)
-        {   
+        {
             for(int i = 0; i < 1000; i = i+5)
             {
                 addObject(new carR(), 0, 287);
             }
         }
-        
+
         if (Greenfoot.getRandomNumber(300) < 1)
         {
             for(int i = 0; i < 1000; i = i+5)
@@ -122,14 +123,14 @@ public class road extends World
                 addObject(new carL(), 1000, 346);
             }
         }
-        
+
         if (Greenfoot.getRandomNumber(300) < 1)
         {
             for(int i = 0; i < 1000; i = i+5)
             {
                 addObject(new carR(), 0, 403);
             }
-        }        
+        }
     }
 
     public void gameOver()
@@ -138,40 +139,39 @@ public class road extends World
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
-    
+
     public void generateEggs()
     {
-        int x = Greenfoot.getRandomNumber(1000);        
-        
+        int x = Greenfoot.getRandomNumber(1000);
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 103);
         }
-        
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 168);
         }
-        
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 224);
         }
-               
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 287);
         }
-              
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 346);
         }
-        
+
         if (Greenfoot.getRandomNumber(generateEggs) < 1)
         {
             addObject(new egg(), x, 403);
-        }             
-    }    
+        }
+    }
 }
-
