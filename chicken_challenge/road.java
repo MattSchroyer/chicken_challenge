@@ -15,6 +15,10 @@ public class road extends World
     private int score;
     private int timeRemaining;
     private int lastTime;
+    
+    // To adjust how often eggs generate
+    private int generateEggs = 1500;
+
 
     private Boolean started = false;
 
@@ -49,6 +53,7 @@ public class road extends World
         showText("", 500, 45);
         updateTime();
         movingCars();
+        generateEggs();
       }
     }
 
@@ -133,4 +138,40 @@ public class road extends World
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
+    
+    public void generateEggs()
+    {
+        int x = Greenfoot.getRandomNumber(1000);        
+        
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 103);
+        }
+        
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 168);
+        }
+        
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 224);
+        }
+               
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 287);
+        }
+              
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 346);
+        }
+        
+        if (Greenfoot.getRandomNumber(generateEggs) < 1)
+        {
+            addObject(new egg(), x, 403);
+        }             
+    }    
 }
+
