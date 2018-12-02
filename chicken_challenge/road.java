@@ -179,9 +179,9 @@ public class road extends World
         }
     }
 
-    public void splatteredChicken()
+    public void loseLife()
     {
-        lives = lives - 1;
+        lives--;
         if (lives == 0)
         {
             gameOver();

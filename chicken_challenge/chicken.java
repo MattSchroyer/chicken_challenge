@@ -28,6 +28,7 @@ public class chicken extends Actor
         keyCheck();
         collisionCheck();
         splatterCheck();
+        finishLineCheck();
     }
 
     public void keyCheck()
@@ -76,13 +77,23 @@ public class chicken extends Actor
       }
     }
 
+    public void finishLineCheck()
+    {
+      if (getY() < 10) {
+        road myRoad = (road)getWorld();
+        myRoad.increaseScore(50);
+        myRoad.loseLife();
+        regenerate();
+      }
+    }
+
     public void splatter()
     {
       splatterTime = new Date();
       isSplattered = true;
       setImage(splat);
       road myRoad = (road)getWorld();
-      myRoad.splatteredChicken();
+      myRoad.loseLife();
     }
 
     public void touchEgg()
