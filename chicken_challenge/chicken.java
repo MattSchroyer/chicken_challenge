@@ -59,8 +59,7 @@ public class chicken extends Actor
         splatter();
       }
       if (isTouching(egg.class)) {
-        road myRoad = (road)getWorld();
-        myRoad.increaseScore(500);
+        touchEgg();
       }
     }
 
@@ -81,6 +80,14 @@ public class chicken extends Actor
       isSplattered = true;
       setImage(splat);
       // myRoad.splatteredChicken();
+    }
+
+    public void touchEgg()
+    {
+      Actor myEgg = getOneIntersectingObject(egg.class);
+      road myRoad = (road)getWorld();
+      myRoad.increaseScore(500);
+      myRoad.removeObject(myEgg);
     }
 
     public void regenerate()
