@@ -56,7 +56,9 @@ public class chicken extends Actor
     public void collisionCheck()
     {
       if (isTouching(carL.class) || isTouching(carR.class)) {
-        splatter();
+        if (!isSplattered) {
+          splatter();
+        }
       }
       if (isTouching(egg.class)) {
         touchEgg();
@@ -79,7 +81,8 @@ public class chicken extends Actor
       splatterTime = new Date();
       isSplattered = true;
       setImage(splat);
-      // myRoad.splatteredChicken();
+      road myRoad = (road)getWorld();
+      myRoad.splatteredChicken();
     }
 
     public void touchEgg()
