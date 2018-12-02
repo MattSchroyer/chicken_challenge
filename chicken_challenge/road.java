@@ -100,7 +100,7 @@ public class road extends World
         {
             for(int i = 0; i < 1000; i = i+5)
             {
-                addObject(new carR(), 0, 168);
+                addObject(new carL(), 0, 168);
             }
         }
 
@@ -124,7 +124,7 @@ public class road extends World
         {
             for(int i = 0; i < 1000; i = i+5)
             {
-                addObject(new carL(), 1000, 346);
+                addObject(new carR(), 1000, 346);
             }
         }
 
