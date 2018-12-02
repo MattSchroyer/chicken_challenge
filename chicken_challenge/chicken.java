@@ -58,7 +58,10 @@ public class chicken extends Actor
       if (isTouching(carL.class) || isTouching(carR.class)) {
         splatter();
       }
-      // add egg collision detection to increase score
+      if (isTouching(egg.class)) {
+        road myRoad = (road)getWorld();
+        myRoad.increaseScore(500);
+      }
     }
 
     public void splatterCheck()
