@@ -90,50 +90,32 @@ public class road extends World
     {
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carL(), 1000, 103);
-            }
+            addObject(new carL(), 1000, 103);
         }
 
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carL(), 0, 168);
-            }
+            addObject(new carL(), 0, 168);
         }
 
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carL(), 1000, 224);
-            }
+            addObject(new carL(), 1000, 224);
         }
 
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carR(), 0, 287);
-            }
+            addObject(new carR(), 0, 287);
         }
 
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carR(), 1000, 346);
-            }
+            addObject(new carR(), 1000, 346);
         }
 
         if (Greenfoot.getRandomNumber(300) < 1)
         {
-            for(int i = 0; i < 1000; i = i+5)
-            {
-                addObject(new carR(), 0, 403);
-            }
+            addObject(new carR(), 0, 403);
         }
     }
 
