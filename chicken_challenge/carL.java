@@ -29,11 +29,11 @@ public class carL extends Actor
 
     public void driveLeft()
     {
-        move(-2);
-        
+        move(-2);       
         if(isTouching(egg.class))
         {
             removeTouching(egg.class);
+            Greenfoot.playSound("eggCrack.wav");
         }
         
         if (isAtEdge())
