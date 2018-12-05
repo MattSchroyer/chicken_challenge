@@ -1,19 +1,13 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class egg here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Renders an egg that can be collected
+ * for extra points.
+ *
+ * @author Matt Schroyer, Elizabeth Haase
+ * @version 0.1
  */
 public class egg extends Actor
 {
-    /**
-     * Act - do whatever the egg wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+
 }

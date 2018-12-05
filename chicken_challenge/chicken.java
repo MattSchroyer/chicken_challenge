@@ -1,20 +1,18 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 
 /**
- * Write a description of class chicken here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Renders a chicken that can be controlled by the player.
+ * Chicken becomes "splattered" when it comes into contact with a car.
+ * Splattering chicken removes control from player
+ * and sends the chicken to the start line after a period of time.
+ * @author Matt Schroyer, Elizabeth Haase
+ * @version 0.1
  */
 public class chicken extends Actor
 {
-    /**
-     * Act - do whatever the chicken wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
 
    GreenfootImage splat = new GreenfootImage("Splat.png");
    GreenfootImage chickenImg = new GreenfootImage("ChickGray.png");
@@ -24,7 +22,6 @@ public class chicken extends Actor
 
     public void act()
     {
-        // Add your action code here.
         keyCheck();
         collisionCheck();
         splatterCheck();

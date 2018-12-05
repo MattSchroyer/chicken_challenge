@@ -1,8 +1,4 @@
 #BlueJ class context
 comment0.target=startScreen
-comment0.text=\n\ Write\ a\ description\ of\ class\ startScreen\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=startScreen()
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+comment0.text=\n\ Renders\ a\ start\ screen\ showing\ game\ instructions.\n\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\n\ @version\ 0.1\n
+numComments=1

@@ -1,17 +1,13 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class endScreen here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Renders an end screen that shows how well
+ * the player did.
+ * @author Matt Schroyer, Elizabeth Haase
+ * @version 0.1
  */
 public class endScreen extends Actor
 {
-    /**
-     * Act - do whatever the endScreen wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public static final float FONT_SIZE = 28.0f;
     public static final int WIDTH = 500;
     public static final int HEIGHT = 250;

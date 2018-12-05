@@ -1,24 +1,12 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class startScreen here.
+ * Renders a start screen showing game instructions.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Matt Schroyer, Elizabeth Haase
+ * @version 0.1
  */
 public class startScreen extends Actor
 {
-    /**
-     * Act - do whatever the startScreen wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
 
-  public startScreen()
-  {
-  }
-
-  public void act()
-  {
-      // Add your action code here.
-  }
 }

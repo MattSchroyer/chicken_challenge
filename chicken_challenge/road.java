@@ -1,10 +1,12 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
 
 /**
  * A road for chickens to cross.
+ * Generates all chickens, cars, and eggs.
+ * Also tracks lives and the score.
  *
  * @author Matt Schroyer, Elizabeth Haase
  * @version 0.1
@@ -16,15 +18,11 @@ public class road extends World
     private int timeRemaining;
     private int lastTime;
 
-    private int lives = 3;  // Used to store lives
-
-
     // To adjust how often eggs generate
     private int generateEggs = 1500;
 
-
+    private int lives = 3;
     private Boolean started = false;
-
     private static int TIME_LIMIT = 31;
 
     private startScreen startscreen = new startScreen();
@@ -35,7 +33,7 @@ public class road extends World
      */
     public road()
     {
-        // Create a new world with 1000x500 cells with a cell size of 1x1 pixels.
+        // Create a new road with 1000x500 cells with a cell size of 1x1 pixels.
         super(1000, 500, 1);
         score = 0;
         timeRemaining = TIME_LIMIT;
@@ -121,7 +119,6 @@ public class road extends World
 
     public void gameOver()
     {
-      // Greenfoot.playSound("game-over-sound.mp3");
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
