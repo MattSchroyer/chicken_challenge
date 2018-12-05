@@ -27,6 +27,8 @@ public class road extends World
 
     private startScreen startscreen = new startScreen();
     private chicken myChicken = new chicken();
+    private GreenfootSound bgm = new GreenfootSound("bgm.mp3");
+    private GreenfootSound endMusic = new GreenfootSound("end.mp3");
     /**
      * Constructor for objects of class road.
      *
@@ -45,11 +47,8 @@ public class road extends World
 
     public void act()
     {
-      if (Greenfoot.isKeyDown("space")) {
-        started = true;
-        removeObject(startscreen);
-        startTime = new Date();
-        updateScore();
+      if (Greenfoot.isKeyDown("space") && !started) {
+        startSequence();
       }
       if (started) {
         showText("", 500, 45);
@@ -58,6 +57,15 @@ public class road extends World
         movingCars();
         generateEggs();
       }
+    }
+
+    public void startSequence()
+    {
+      started = true;
+      bgm.play();
+      removeObject(startscreen);
+      startTime = new Date();
+      updateScore();
     }
 
     public void updateTime() {
@@ -116,14 +124,16 @@ public class road extends World
             addObject(new carR(), 0, 403);
         }
     }
-    
+
     // Game over Method to display end screen
     public void gameOver()
     {
+      bgm.stop();
+      endMusic.play();
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
-    
+
     // Method for generating eggs randomly
     public void generateEggs()
     {
@@ -159,7 +169,7 @@ public class road extends World
             addObject(new egg(), x, 403);
         }
     }
-    
+
     // Methods for losing life and updating lives
     public void loseLife()
     {
