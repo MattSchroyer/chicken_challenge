@@ -116,13 +116,15 @@ public class road extends World
             addObject(new carR(), 0, 403);
         }
     }
-
+    
+    // Game over Method to display end screen
     public void gameOver()
     {
       addObject(new endScreen(score), 500, 250);
       Greenfoot.stop();
     }
-
+    
+    // Method for generating eggs randomly
     public void generateEggs()
     {
         int x = Greenfoot.getRandomNumber(1000);
@@ -157,7 +159,8 @@ public class road extends World
             addObject(new egg(), x, 403);
         }
     }
-
+    
+    // Methods for losing life and updating lives
     public void loseLife()
     {
         lives--;

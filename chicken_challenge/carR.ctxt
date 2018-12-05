@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=carR
-comment0.text=\n\ Renders\ a\ car\ travelling\ from\ right\ to\ left\n\ across\ the\ road\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\n\ @version\ 0.1\n
+comment0.text=\r\n\ Renders\ a\ car\ travelling\ from\ right\ to\ left\r\n\ across\ the\ road\r\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\r\n\ @version\ 0.1\r\n
 comment1.params=
 comment1.target=carR()
 comment2.params=

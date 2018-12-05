@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=endScreen
-comment0.text=\n\ Renders\ an\ end\ screen\ that\ shows\ how\ well\n\ the\ player\ did.\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\n\ @version\ 0.1\n
+comment0.text=\r\n\ Renders\ an\ end\ screen\ that\ shows\ how\ well\r\n\ the\ player\ did.\r\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\r\n\ @version\ 0.1\r\n
 comment1.params=score
 comment1.target=endScreen(int)
 numComments=2
