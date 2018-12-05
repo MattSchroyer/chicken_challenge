@@ -20,6 +20,10 @@ public class carR extends Actor
 
     public void act()
     {
+        if(isTouching(carR.class))
+        {
+            removeTouching(carR.class);           
+        }
         driveRight();
     }
 

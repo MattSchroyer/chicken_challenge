@@ -18,12 +18,14 @@ public class carL extends Actor
         randomCar();
     }
 
-
     public void act()
     {
+        if(isTouching(carL.class))
+        {
+            removeTouching(carL.class);           
+        }
         driveLeft();
     }
-
 
     public void driveLeft()
     {
