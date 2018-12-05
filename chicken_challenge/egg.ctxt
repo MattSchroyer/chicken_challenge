@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.target=egg
-comment0.text=\r\n\ Renders\ an\ egg\ that\ can\ be\ collected\r\n\ for\ extra\ points.\r\n\r\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\r\n\ @version\ 0.1\r\n
-numComments=1
+comment0.text=\n\ Renders\ an\ egg\ that\ can\ be\ collected\n\ for\ extra\ points.\n\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\n\ @version\ 0.1\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ collisionCheck()
+numComments=3

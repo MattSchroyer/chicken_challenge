@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=chicken
-comment0.text=\r\n\ Renders\ a\ chicken\ that\ can\ be\ controlled\ by\ the\ player.\r\n\ Chicken\ becomes\ "splattered"\ when\ it\ comes\ into\ contact\ with\ a\ car.\r\n\ Splattering\ chicken\ removes\ control\ from\ player\r\n\ and\ sends\ the\ chicken\ to\ the\ start\ line\ after\ a\ period\ of\ time.\r\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\r\n\ @version\ 0.1\r\n
+comment0.text=\n\ Renders\ a\ chicken\ that\ can\ be\ controlled\ by\ the\ player.\n\ Chicken\ becomes\ "splattered"\ when\ it\ comes\ into\ contact\ with\ a\ car.\n\ Splattering\ chicken\ removes\ control\ from\ player\n\ and\ sends\ the\ chicken\ to\ the\ start\ line\ after\ a\ period\ of\ time.\n\ @author\ Matt\ Schroyer,\ Elizabeth\ Haase\n\ @version\ 0.1\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

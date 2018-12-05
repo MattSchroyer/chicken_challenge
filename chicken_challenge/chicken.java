@@ -16,6 +16,8 @@ public class chicken extends Actor
 
    GreenfootImage splat = new GreenfootImage("Splat.png");
    GreenfootImage chickenImg = new GreenfootImage("ChickGray.png");
+   private GreenfootSound levelUp = new GreenfootSound("LevelUp.mp3");
+   private GreenfootSound finishLine = new GreenfootSound("LevelUp2.mp3");
 
    private Boolean isSplattered = false;
    private Date splatterTime;
@@ -80,6 +82,7 @@ public class chicken extends Actor
         road myRoad = (road)getWorld();
         myRoad.increaseScore(50);
         myRoad.loseLife();
+        finishLine.play();
         regenerate();
       }
     }
@@ -89,6 +92,7 @@ public class chicken extends Actor
       splatterTime = new Date();
       isSplattered = true;
       setImage(splat);
+      Greenfoot.playSound("eggCrack.wav");
       road myRoad = (road)getWorld();
       myRoad.loseLife();
     }
@@ -99,6 +103,7 @@ public class chicken extends Actor
       road myRoad = (road)getWorld();
       myRoad.increaseScore(500);
       myRoad.removeObject(myEgg);
+      levelUp.play();
     }
 
     public void regenerate()

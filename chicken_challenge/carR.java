@@ -13,6 +13,8 @@ public class carR extends Actor
     GreenfootImage img2 = new GreenfootImage("Car2Right.png");
     GreenfootImage img3 = new GreenfootImage("Car3Right.png");
 
+    private GreenfootSound eggCrack = new GreenfootSound("eggCrack.wav");
+
     public carR()
     {
         randomCar();
@@ -22,20 +24,20 @@ public class carR extends Actor
     {
         if(isTouching(carR.class))
         {
-            removeTouching(carR.class);           
+            removeTouching(carR.class);
         }
         driveRight();
     }
 
     public void driveRight()
     {
-        move(2);        
+        move(2);
         if(isTouching(egg.class))
         {
+            eggCrack.play();
             removeTouching(egg.class);
-            Greenfoot.playSound("eggCrack.wav");
         }
-        
+
         if (isAtEdge())
         {
             getWorld().removeObject(this);
