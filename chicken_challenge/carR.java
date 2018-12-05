@@ -30,6 +30,12 @@ public class carR extends Actor
     public void driveRight()
     {
         move(2);
+        
+        if(isTouching(egg.class))
+        {
+            removeTouching(egg.class);
+        }
+        
         if (isAtEdge())
         {
             getWorld().removeObject(this);
